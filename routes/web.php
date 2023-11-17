@@ -15,4 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+
+Route::post('/launchScan', ['App\Http\Controllers\MapSiteController', 'launchscan'])
+    ->name('launchscan');
