@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::post('/launchScan', ['App\Http\Controllers\MapSiteController', 'launchscan'])
     ->name('launchscan');
+
+Route::get('/debug', ['\App\Http\Controllers\MapSiteController', 'debugView']);
