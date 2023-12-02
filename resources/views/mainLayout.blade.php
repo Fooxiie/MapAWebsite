@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Map a website - @yield('title')</title>
+    <title>Map a website @yield('title')</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -33,7 +33,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main" class="h-auto">
         @yield('content')
     </main>
 

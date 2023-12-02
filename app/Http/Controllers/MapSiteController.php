@@ -12,7 +12,7 @@ class MapSiteController extends Controller
         $url = $request->get('urlToScan');
         $analyser = new AppAnalyser($url);
         $analyser->start_analyse();
-        return view('result', [
+        return view('welcome', [
             'fromUrl' => $url,
             'scan' => $analyser->getExternalDependencies()
         ]);
@@ -20,7 +20,7 @@ class MapSiteController extends Controller
 
     public function debugView()
     {
-        return view('result', [
+        return view('welcome', [
             'scan' => ['dada' => [], 'dodo' => ['dudu', 'dada']],
             'fromUrl' => 'tuconnais'
         ]);
