@@ -9,7 +9,7 @@
             @csrf
             <input type="url" class="shadow-lg rounded bg-gray-800
             border-none w-full" placeholder="https://..." name="urlToScan"
-                   id="urlToScan" value="{{$fromUrl}}"/>
+                   id="urlToScan" value="{{$fromUrl ?? null}}"/>
             <button class="btn bg-amber-400 hover:bg-amber-200 hover:text-gray-950
             h-max
             flex-shrink-0">Map me !
@@ -42,7 +42,7 @@
         // };
         // source = "fr.yahoo.com";
 
-        targets = {!! json_encode($scan) !!};
-        source = "{!! $fromUrl !!}";
+        targets = {!! json_encode($scan ?? null) !!};
+        source = "{!! $fromUrl ?? null !!}";
     </script>
 @endsection
