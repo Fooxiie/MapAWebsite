@@ -43,7 +43,8 @@
         sm:text-right sm:ml-0 mb-4">
             All right reserved <a
                 href="https://github.com/Fooxiie">©️Fooxiie</a>
-            v0.1
+            v1.0
+            <a href="https://www.buymeacoffee.com/devfooxiie">☕ BuyMeACoffe</a>
         </div>
     </footer>
 </div>

@@ -52,10 +52,9 @@ function compterElements(targets) {
 const points = [];
 const root = createNode(0, 0,
     (svg.getBoundingClientRect().width/2), (svg.getBoundingClientRect().height/2),
-    'https://s.yimg.com/rz/l/favicon.ico', source);
+    'http://www.google.com/s2/favicons?domain=' + source, source);
 points.push(root);
 svg.appendChild(root);
-console.log(root);
 
 function BuildChildNode(nodes, ref) {
     var actuelCount = 0;
@@ -65,7 +64,7 @@ function BuildChildNode(nodes, ref) {
     for (const target in nodes) {
 
         const angle = (actuelCount * 2 * Math.PI) / countTargets;
-        const imageSrc = 'https://s.yimg.com/rz/l/favicon.ico'; // Lien du FavIcon
+        const imageSrc = 'http://www.google.com/s2/favicons?domain=' + target; // Lien du FavIcon
         const refBounding = ref.getBoundingClientRect()
         const node = createNode(
             angle, rayon, ref.transform.baseVal[0].matrix.e, ref.transform.baseVal[0].matrix.f , imageSrc, target);
@@ -77,10 +76,6 @@ function BuildChildNode(nodes, ref) {
         creerLien(ref, node);
 
         actuelCount += 1;
-
-        if (target.length > 0) {
-            console.log(nodes[target]);
-        }
     }
 }
 
